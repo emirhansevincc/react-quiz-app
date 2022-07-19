@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { questions } from './questions';
 
 function App() {
+
+  const [currentQuestion, setcurrentQuestion] = useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className='question-part'>
+        <p>1 / 4</p>
+        <hr />
+        <p className='question-text'>merhaba burada soru olacak</p>
+      </div>
+
+      <div className='options-part'>
+        {
+          questions[currentQuestion].options.map((option, index) => (
+            <button className='option' key={index}>{option.answer}</button>
+          ))
+        }
+      </div>
+
     </div>
   );
 }
