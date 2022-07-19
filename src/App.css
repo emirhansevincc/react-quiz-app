@@ -22,13 +22,11 @@ hr{
   border: 1px solid darkgray;
   margin: 10px 0;
 }
-.question-text{
-  margin: 15px 0 10px 0;
-}
+.question-text{margin: 15px 0 10px 0;}
 .options-part{
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .option{
   background-color: transparent;
@@ -40,3 +38,4 @@ hr{
   cursor: pointer;
 }
 .option:hover{background-color: rgb(33, 32, 32);}
+small{font-size: 15px;}
